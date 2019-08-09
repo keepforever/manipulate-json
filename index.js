@@ -20,25 +20,17 @@ fs.readFile("./scryfall-default-cards.json", "utf8", (err, jsonString) => {
         const tempKeys = Object.keys(temp);
 
         tempKeys.forEach((key) => {
-            if (temp[key].arena_id) {
-
-                if (currentSets.some(el => temp[key].set === el) ) {
-                    console.log(`
-                    #########################################################
-                                    TEWST
-                    #########################################################
-                    `);
-
-                    console.log('\n', `set: ${temp[key].set} `, '\n');
-
-                    console.log(`
-                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-                    #########################################################
-                    `);
+            const card = temp[key];
+            if (card.arena_id) {
+                const layout = card.layout;
+                let masterKey = '';
+                if (layout === 'split' || layout === 'transform') {
+                    const prePend = 'xxx';
+                    masterKey = prePend + card.collector_number + card.set;
+                } else {
+                    masterKey = card.collector_number + card.set;
                 }
-
-                const masterKey = temp[key].collector_number + temp[key].set;
-                const masterValue = buildMasterValue(temp[key]);
+                const masterValue = buildMasterValue(card);
                 finalDictionary[masterKey] = masterValue
 
             }
@@ -58,3 +50,19 @@ fs.readFile("./scryfall-default-cards.json", "utf8", (err, jsonString) => {
     }
 
 });
+
+
+// if (currentSets.some(el => card.set === el) ) {
+//     console.log(`
+//     #########################################################
+//                     TEWST
+//     #########################################################
+//     `);
+//
+//     console.log('\n', `set: ${card.set} `, '\n');
+//
+//     console.log(`
+//     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+//     #########################################################
+//     `);
+// }
