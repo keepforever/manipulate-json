@@ -18255,7 +18255,7 @@
     "text": "Flying, vigilance, trample\nPalladia-Mors, the Ruiner has hexproof if it hasn't dealt damage yet.",
     "layout": "normal"
   },
-  "xxx218m19": {
+  "218m19": {
     "name": "Nicol Bolas, the Ravager // Nicol Bolas, the Arisen",
     "cmc": 4,
     "arena_id": 68116,
@@ -25409,7 +25409,7 @@
     "text": "Players can't activate planeswalkers' loyalty abilities.\nAt the beginning of your draw step, draw an additional card.\nSpells you cast cost {1} less to cast.\nCreatures you control get +1/+1.",
     "layout": "normal"
   },
-  "xxx179rix": {
+  "179rix": {
     "name": "Golden Guardian // Gold-Forge Garrison",
     "cmc": 4,
     "arena_id": 66987,
@@ -25465,7 +25465,7 @@
     "text": "Equipped creature gets +2/+0, has menace, and is a Pirate in addition to its other creature types.\nWhenever Captain's Hook becomes unattached from a permanent, destroy that permanent.\nEquip {1}",
     "layout": "normal"
   },
-  "xxx176rix": {
+  "176rix": {
     "name": "Azor's Gateway // Sanctum of the Sun",
     "cmc": 2,
     "arena_id": 66979,
@@ -25521,7 +25521,7 @@
     "text": "Vigilance, reach, trample\nWhen Zacama, Primal Calamity enters the battlefield, if you cast it, untap all lands you control.\n{2}{R}: Zacama deals 3 damage to target creature.\n{2}{G}: Destroy target artifact or enchantment.\n{2}{W}: You gain 3 life.",
     "layout": "normal"
   },
-  "xxx173rix": {
+  "173rix": {
     "name": "Storm the Vault // Vault of Catlacan",
     "cmc": 4,
     "arena_id": 66971,
@@ -25633,7 +25633,7 @@
     "text": "Raid — If you attacked with a creature this turn, you may have Protean Raider enter the battlefield as a copy of any creature on the battlefield.",
     "layout": "normal"
   },
-  "xxx166rix": {
+  "166rix": {
     "name": "Profane Procession // Tomb of the Dusk Rose",
     "cmc": 3,
     "arena_id": 66955,
@@ -25661,7 +25661,7 @@
       }
     ]
   },
-  "xxx165rix": {
+  "165rix": {
     "name": "Path of Mettle // Metzali, Tower of Triumph",
     "cmc": 2,
     "arena_id": 66951,
@@ -25745,7 +25745,7 @@
     "text": "{3}{B}{G}: Return Jungle Creeper from your graveyard to your hand.",
     "layout": "normal"
   },
-  "xxx160rix": {
+  "160rix": {
     "name": "Journey to Eternity // Atzal, Cave of Eternity",
     "cmc": 3,
     "arena_id": 66939,
@@ -25787,7 +25787,7 @@
     "text": "+1: Put a loyalty counter on Huatli, Radiant Champion for each creature you control.\n−1: Target creature gets +X/+X until end of turn, where X is the number of creatures you control.\n−8: You get an emblem with \"Whenever a creature enters the battlefield under your control, you may draw a card.\"",
     "layout": "normal"
   },
-  "xxx158rix": {
+  "158rix": {
     "name": "Hadana's Climb // Winged Temple of Orazca",
     "cmc": 3,
     "arena_id": 66933,
@@ -28559,7 +28559,7 @@
     "text": "As Vanquisher's Banner enters the battlefield, choose a creature type.\nCreatures you control of the chosen type get +1/+1.\nWhenever you cast a creature spell of the chosen type, draw a card.",
     "layout": "normal"
   },
-  "xxx250xln": {
+  "250xln": {
     "name": "Treasure Map // Treasure Cove",
     "cmc": 2,
     "arena_id": 66477,
@@ -28587,7 +28587,7 @@
       }
     ]
   },
-  "xxx249xln": {
+  "249xln": {
     "name": "Thaumatic Compass // Spires of Orazca",
     "cmc": 2,
     "arena_id": 66473,
@@ -28685,7 +28685,7 @@
     "text": "Equipped creature gets +1/+0.\nWhenever equipped creature deals combat damage to a player, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")\nEquip {2} ({2}: Attach to target creature you control. Equip only as a sorcery.)",
     "layout": "normal"
   },
-  "xxx243xln": {
+  "243xln": {
     "name": "Primal Amulet // Primal Wellspring",
     "cmc": 4,
     "arena_id": 66459,
@@ -28811,7 +28811,7 @@
     "text": "Vigilance\nCrew 2 (Tap any number of creatures you control with total power 2 or more: This Vehicle becomes an artifact creature until end of turn.)",
     "layout": "normal"
   },
-  "xxx235xln": {
+  "235xln": {
     "name": "Dowsing Dagger // Lost Vale",
     "cmc": 2,
     "arena_id": 66441,
@@ -28839,7 +28839,7 @@
       }
     ]
   },
-  "xxx234xln": {
+  "234xln": {
     "name": "Conqueror's Galleon // Conqueror's Foothold",
     "cmc": 4,
     "arena_id": 66437,
@@ -29455,7 +29455,7 @@
     "text": "When Ixalli's Diviner enters the battlefield, it explores. (Reveal the top card of your library. Put that card into your hand if it's a land. Otherwise, put a +1/+1 counter on this creature, then put the card back or put it into your graveyard.)",
     "layout": "normal"
   },
-  "xxx191xln": {
+  "191xln": {
     "name": "Growing Rites of Itlimoc // Itlimoc, Cradle of the Sun",
     "cmc": 3,
     "arena_id": 66349,
@@ -29721,7 +29721,7 @@
     "text": "When Wily Goblin enters the battlefield, create a Treasure token. (It's an artifact with \"{T}, Sacrifice this artifact: Add one mana of any color.\")",
     "layout": "normal"
   },
-  "xxx173xln": {
+  "173xln": {
     "name": "Vance's Blasting Cannons // Spitfire Bastion",
     "cmc": 4,
     "arena_id": 66311,
@@ -30897,7 +30897,7 @@
     "text": "When Bishop of the Bloodstained enters the battlefield, target opponent loses 1 life for each Vampire you control.",
     "layout": "normal"
   },
-  "xxx90xln": {
+  "90xln": {
     "name": "Arguel's Blood Fast // Temple of Aclazotz",
     "cmc": 2,
     "arena_id": 66143,
@@ -31135,7 +31135,7 @@
     "text": "Shaper Apprentice has flying as long as you control another Merfolk.",
     "layout": "normal"
   },
-  "xxx74xln": {
+  "74xln": {
     "name": "Search for Azcanta // Azcanta, the Sunken Ruin",
     "cmc": 2,
     "arena_id": 66109,
@@ -31877,7 +31877,7 @@
     "text": "",
     "layout": "normal"
   },
-  "xxx22xln": {
+  "22xln": {
     "name": "Legion's Landing // Adanto, the First Fort",
     "cmc": 1,
     "arena_id": 66003,

@@ -34,7 +34,7 @@ fs.readFile("./scryfall-default-cards.json", "utf8", (err, jsonString) => {
             if (card.arena_id) {
                 const layout = card.layout;
                 let masterKey = '';
-                if (layout === 'split' || layout === 'transform') {
+                if (layout === 'split') {
                     const prePend = 'xxx';
                     masterKey = prePend + card.collector_number + cardSet;
                 } else {
