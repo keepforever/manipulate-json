@@ -21,20 +21,30 @@ fs.readFile("./scryfall-default-cards.json", "utf8", (err, jsonString) => {
 
         tempKeys.forEach((key) => {
             const card = temp[key];
+
+            if (!currentSets.some(el => card.set === el) ) return;
+
+            let cardSet = 'error';
+            if (card.set === 'dom') {
+                cardSet = 'dar';
+            } else {
+                cardSet = card.set;
+            }
+
             if (card.arena_id) {
                 const layout = card.layout;
                 let masterKey = '';
                 if (layout === 'split' || layout === 'transform') {
                     const prePend = 'xxx';
-                    masterKey = prePend + card.collector_number + card.set;
+                    masterKey = prePend + card.collector_number + cardSet;
                 } else {
-                    masterKey = card.collector_number + card.set;
+                    masterKey = card.collector_number + cardSet;
                 }
                 const masterValue = buildMasterValue(card);
                 finalDictionary[masterKey] = masterValue
 
             }
-        })
+        });
     } catch (err) {
         console.log("Error parsing JSON string:", err);
     } finally {
@@ -50,19 +60,3 @@ fs.readFile("./scryfall-default-cards.json", "utf8", (err, jsonString) => {
     }
 
 });
-
-
-// if (currentSets.some(el => card.set === el) ) {
-//     console.log(`
-//     #########################################################
-//                     TEWST
-//     #########################################################
-//     `);
-//
-//     console.log('\n', `set: ${card.set} `, '\n');
-//
-//     console.log(`
-//     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-//     #########################################################
-//     `);
-// }
