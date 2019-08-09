@@ -58,7 +58,7 @@ const buildMasterValue = (card) => {
 
 const currentSets = [
     'ana',
-    'dar', // dom
+    'dom', // which gets recorded as 'dar'
     'm20',
     'war',
     'rna',
