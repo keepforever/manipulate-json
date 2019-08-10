@@ -48,8 +48,8 @@ fs.readFile("./scryfall-default-cards.json", "utf8", (err, jsonString) => {
     } catch (err) {
         console.log("Error parsing JSON string:", err);
     } finally {
-        const jsonString = JSON.stringify(finalDictionary)
-        fs.writeFile('./cardDictionary.json', jsonString, err => {
+        const finalDictionaryJsonString = JSON.stringify(finalDictionary)
+        fs.writeFile('./cardDictionary.json', finalDictionaryJsonString, err => {
             if (err) {
                 console.log('Error writing file', err)
             } else {
