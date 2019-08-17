@@ -1,21 +1,22 @@
 const every_nth = (arr, nth) => arr.filter((e, i) => i % nth === nth - 1);
 
-const cardFacesImportant = (inputArray) => {
-    function helper (el) {
+const cardFacesImportant = inputArray => {
+    function helper(el) {
         return {
             name: el.name || null,
             type_line: el.type_line || null,
             mana_cost: el.mana_cost || null,
             text: el.oracle_text || null,
-            color: el.colors ? el.colors.join('') : null,
-        }
+            color: el.colors ? el.colors.join('') : null
+        };
     }
-    return inputArray.map(el => helper(el) )
-}
+    return inputArray.map(el => helper(el));
+};
 
-const importantInfoNormal = (obj) => {
+const importantInfoNormal = obj => {
     return {
         name: obj.name,
+        lookup: buildMasterKey(obj),
         cmc: obj.cmc,
         type_line: obj.type_line,
         arena_id: obj.arena_id,
@@ -23,16 +24,17 @@ const importantInfoNormal = (obj) => {
         set: obj.set,
         mana_cost: obj.mana_cost,
         rarity: obj.rarity,
-        pt: (obj.power && obj.toughness) ? `${obj.power}/${obj.toughness}` : null,
-        color: obj.colors.join('') ,
+        pt: obj.power && obj.toughness ? `${obj.power}/${obj.toughness}` : null,
+        color: obj.colors.join(''),
         text: obj.oracle_text,
         layout: obj.layout
-    }
-}
+    };
+};
 
-const importantInfoSplitOrTransform = (obj) => {
+const importantInfoSplitOrTransform = obj => {
     return {
         name: obj.name || null,
+        lookup: buildMasterKey(obj),
         cmc: obj.cmc || null,
         arena_id: obj.arena_id || null,
         collector_number: obj.collector_number || null,
@@ -43,18 +45,37 @@ const importantInfoSplitOrTransform = (obj) => {
         color: obj.color_identity ? obj.color_identity.join('') : null,
         layout: obj.layout || null,
         card_faces: cardFacesImportant(obj.card_faces)
-    }
-}
+    };
+};
 
-const buildMasterValue = (card) => {
+const buildMasterValue = card => {
     if (card.layout === 'normal') {
         return importantInfoNormal(card);
     }
 
     if (card.layout === 'split' || card.layout === 'transform') {
-        return importantInfoSplitOrTransform(card)
+        return importantInfoSplitOrTransform(card);
     }
-}
+};
+
+const buildMasterKey = card => {
+    let cardSet = 'error';
+    if (card.set === 'dom') {
+        cardSet = 'dar';
+    } else {
+        cardSet = card.set;
+    }
+    const layout = card.layout;
+    let masterKey = '';
+    if (layout === 'split') {
+        const prePend = 'xxx';
+        masterKey = prePend + card.collector_number + cardSet;
+    } else {
+        masterKey = card.collector_number + cardSet;
+    }
+
+    return masterKey;
+};
 
 const currentSets = [
     'ana',
@@ -69,7 +90,13 @@ const currentSets = [
     'xln'
 ];
 
-const layoutInquiry =  { normal: 3200, split: 45, transform: 18, token: 76, saga: 14 }
+const layoutInquiry = {
+    normal: 3200,
+    split: 45,
+    transform: 18,
+    token: 76,
+    saga: 14
+};
 
 const setInquiry = {
     ana: 39,
@@ -81,7 +108,7 @@ const setInquiry = {
     grn: 273,
     m19: 314,
     rix: 205,
-    xln: 289,
+    xln: 289
 
     // don't care about
     // tdom: 14,
@@ -98,13 +125,13 @@ const setInquiry = {
     // kld: 274,
     // tkld: 9,
     // ogw: 5
-}
-
+};
 
 module.exports = {
     every_nth,
     importantInfoNormal,
     importantInfoSplitOrTransform,
     buildMasterValue,
+    buildMasterKey,
     currentSets
-}
+};
