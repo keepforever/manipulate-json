@@ -26033,6 +26033,21 @@
         "text": "If a Wizard entering the battlefield under your control causes a triggered ability of a permanent you control to trigger, that ability triggers an additional time.",
         "layout": "normal"
     },
+    "57dar": {
+        "name": "The Mirari Conjecture",
+        "lookup": "57dar",
+        "cmc": 5,
+        "type_line": "Enchantment — Saga",
+        "arena_id": 67216,
+        "collector_number": "57",
+        "set": "dom",
+        "mana_cost": "{U}{4}",
+        "rarity": "uncommon",
+        "pt": "",
+        "color": "U",
+        "text": "(As this Saga enters and after your draw step, add a lore counter. Sacrifice after III.) I — Return target instant card from your graveyard to your hand. II — Return target sorcery card from your graveyard to your hand. III — Until end of turn, whenever you cast an instant or sorcery spell, copy it. You may choose new targets for the copy.",
+        "layout": "normal"
+    },
     "56dar": {
         "name": "Merfolk Trickster",
         "lookup": "56dar",
